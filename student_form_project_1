@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="icon" href="icon.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to right,#091057,#024CAA,#EC8305,#f8fbfe);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-image: linear-gradient(to right,#D2E0FB,#C4D7FF,#FFD7C4,#f650e2);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            font-family: cursive;
+            color: crimson;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 10px 5px 5px gray;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #09120c;
+            border-radius: 10px;
+            background-color: #cfe5e9;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #FFE5CF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Registration Form</h2>
+    <form action="thankyou.html">
+        <fieldset><legend>Personal details</legend>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" pattern="[A-Za-z]{3,8}" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="number" id="phone" name="phone" pattern="[6-9][0-9]{9}" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+    </fieldset>
+    <fieldset><legend>Educational Details</legend><br>
+        <label for="studentID">Student ID / Roll Number:</label>
+        <input type="text" id="studentID" name="studentID" required>
+        <label for="profilePic">Upload Profile Picture:</label>
+        <input type="file" id="profilePic" name="profilePic" accept="image/*"><br><br>
+        <label for="course">Course/Department:</label>
+        <input type="radio" id="cs" name="dept">
+        <label for="cs">CS</label>
+        <input type="radio" id="cs" name="dept">
+        <label for="ec">EC</label>
+        <input type="radio" id="civil" name="dept">
+        <label for="civil">CIVIL</label>
+        <input type="radio" id="mechanical" name="dept">
+        <label for="mechanical">MECHANICAL</label>
+        <input type="radio" id="eee" name="dept">
+        <label for="eee">EEE</label><br><br>
+        <label >YOG:</label>
+        <select name="" id="">
+        <option value="">2020</option>
+        <option value="">2021</option>
+        <option value="">2022</option>
+        <option value="">2023</option>
+        <option value="">2024</option>
+        <option value="">2025</option>
+    </select><br><br>
+    <label for="">SKILLS:</label>
+    <input type="checkbox">
+    <label for="">HTML</label>
+    <input type="checkbox">
+    <label for="">CSS</label>
+    <input type="checkbox">
+    <label for="">Javascript</label>
+    <input type="checkbox">
+    <label for="">JAVA</label>
+    <input type="checkbox">
+    <label for="">SQL</label>
+    </fieldset>
+    <fieldset>
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the <a href="#">terms and conditions</a>.</label>
+    </fieldset>
+        <input type="submit">
+    </form>
+</div>
+
+</body>
+</html>
